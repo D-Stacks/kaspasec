@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/kaspanet/go-secp256k1"
+	"github.com/D-Stacks/go-secp256k1"
 	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/client"
 	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
 	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
@@ -47,6 +47,8 @@ func sweep(conf *sweepConfig) error {
 	if err != nil {
 		return err
 	}
+
+	fmt.Println(address)
 
 	daemonClient, tearDown, err := client.Connect(conf.DaemonAddress)
 	if err != nil {

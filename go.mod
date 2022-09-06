@@ -11,7 +11,6 @@ require (
 	github.com/jessevdk/go-flags v1.4.0
 	github.com/jrick/logrotate v1.0.0
 	github.com/kaspanet/go-muhash v0.0.4
-	github.com/kaspanet/go-secp256k1 v0.0.7
 	github.com/pkg/errors v0.9.1
 	github.com/syndtr/goleveldb v1.0.1-0.20190923125748-758128399b1d
 	github.com/tyler-smith/go-bip39 v1.1.0
@@ -23,6 +22,7 @@ require (
 )
 
 require (
+	github.com/D-Stacks/go-secp256k1 v0.0.0-20220904200203-fe3e08700b36 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 // indirect
 	golang.org/x/sys v0.0.0-20211019181941-9d821ace8654 // indirect

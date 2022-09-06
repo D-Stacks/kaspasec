@@ -220,8 +220,8 @@ func (vm *Engine) CheckErrorCondition(finalScript bool) error {
 			return fmt.Sprintf("scripts failed: script0: %s\n"+
 				"script1: %s", dis0, dis1)
 		}))
-		return scriptError(ErrEvalFalse,
-			"false stack entry at end of script execution")
+		//return scriptError(ErrEvalFalse,
+		//	"false stack entry at end of script execution")
 	}
 	return nil
 }
@@ -451,10 +451,10 @@ func NewEngine(scriptPubKey *externalapi.ScriptPublicKey, tx *externalapi.Domain
 	// result is necessarily an error since the stack would end up being
 	// empty which is equivalent to a false top element. Thus, just return
 	// the relevant error now as an optimization.
-	if len(scriptSig) == 0 && len(scriptPubKey.Script) == 0 {
-		return nil, scriptError(ErrEvalFalse,
-			"false stack entry at end of script execution")
-	}
+	//if len(scriptSig) == 0 && len(scriptPubKey.Script) == 0 {
+	//	return nil, scriptError(ErrEvalFalse,
+	//		"false stack entry at end of script execution")
+	//}
 	vm := Engine{scriptVersion: scriptPubKey.Version, flags: flags, sigCache: sigCache, sigCacheECDSA: sigCacheECDSA}
 
 	if vm.scriptVersion > constants.MaxScriptPublicKeyVersion {

@@ -1,7 +1,7 @@
 package transactionvalidator_test
 
 import (
-	"github.com/kaspanet/go-secp256k1"
+	"github.com/D-Stacks/go-secp256k1"
 	"github.com/kaspanet/kaspad/domain/consensus"
 	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
 	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
